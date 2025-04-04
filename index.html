@@ -15,7 +15,6 @@
             padding-bottom: 50px; 
         }
 
-        
         .section {
             padding-top: 50px; 
         }
@@ -27,13 +26,13 @@
         }
 
         .profile-image {
-            width: 800px; 
+            width: 300px; 
             height: 300px;
             border-radius: 50%;
+            object-fit: cover;
             margin-right: 30px; 
         }
 
-        
         .text-box {
             background-color: #fff;
             padding: 20px;
@@ -45,29 +44,24 @@
             color: black; 
         }
 
-        
         .title {
             color: black !important; 
         }
 
-        
         .projects-section {
             margin-top: -300px; 
         }
 
-        
         .container {
             padding: -80px 0; 
         }
     </style>
 </head>
 <body>
-    <section class="hero is-primary is-fullheight">
+    <section class="hero is-primary" style="min-height: 70vh;">
         <div class="hero-body">
             <div class="container has-text-centered profile-container">
-                <!-- Imagem do perfil -->
                 <img class="profile-image" src="images/foto.jpg" alt="Minha Foto">
-                <!-- Caixa de texto -->
                 <div class="text-box">
                     <h1 class="title">Isaias Fernandes</h1>
                     <p>Sou estudante de desenvolvimento web, apaixonado por criar experiências digitais inovadoras. Estou sempre em busca de novos desafios para aprimorar minhas habilidades e compartilhar meus projetos com o mundo. No meu portfólio, você encontrará alguns dos meus projetos de destaque e experiências anteriores.</p>
@@ -78,8 +72,18 @@
     
     <section class="section projects-section">
         <div class="container">
-            <h2 class="title has-text-centered">Projetos</h2>
-            <div class="columns is-multiline" id="projects"></div>
+            <h2 class="title has-text-centered">Meu Github</h2>
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-content has-text-centered">
+                            <p class="title">
+                                <a href="https://github.com/IsaiasFernandes22" target="_blank">https://github.com/IsaiasFernandes22</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -88,30 +92,5 @@
             <p>&copy; 2025 Isaias Fernandes. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const projects = [
-                { title: "Projeto 1", description: "Descrição do projeto 1." },
-                { title: "Projeto 2", description: "Descrição do projeto 2." },
-                { title: "Projeto 3", description: "Descrição do projeto 3." }
-            ];
-
-            const projectsContainer = document.getElementById("projects");
-            projects.forEach(proj => {
-                const projectCard = `
-                    <div class="column is-one-third">
-                        <div class="card">
-                            <div class="card-content">
-                                <p class="title">${proj.title}</p>
-                                <p class="subtitle">${proj.description}</p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                projectsContainer.innerHTML += projectCard;
-            });
-        });
-    </script>
 </body>
 </html>
